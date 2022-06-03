@@ -1,5 +1,6 @@
 """custom math operations"""
 import logging
+
 import example.module2
 
 _LOGGER = logging.getLogger(__name__)

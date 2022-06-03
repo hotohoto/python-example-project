@@ -1,4 +1,5 @@
 from unittest.mock import patch
+
 import example.module1
 
 
