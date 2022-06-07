@@ -1,4 +1,4 @@
-# An opinionated example python project
+# An opinionated example project in Python
 
 ## Features
 
