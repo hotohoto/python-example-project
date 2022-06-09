@@ -43,7 +43,9 @@ pytest
 ## Run scripts
 
 ```bash
-poetry run hello
+poe my_script
+poe hello
+poe main
 python src/main.py
 ```
 

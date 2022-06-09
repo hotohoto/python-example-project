@@ -1,31 +1,34 @@
 [tool.poetry]
-name = "python-example-project"
-version = "0.1.0"
-readme = "README.md"
-description = ""
 authors = ["Hoyeong Heo <hotohoto82@gmail.com>"]
+description = ""
+name = "python-example-project"
 packages = [
-    { include = "example", from="src" }
+  {include = "example", from = "src"},
 ]
+readme = "README.md"
+version = "0.1.0"
 
 [tool.poetry.dependencies]
-python = "^3.8"
 click = "^8.0.1"
+python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 black = "^21.5b1"
-pytest = "^6.2.4"
-flake8 = "^3.9.2"
 coverage = {extras = ["toml"], version = "^5.5"}
-pytest-cov = "^2.12.0"
+flake8 = "^3.9.2"
 isort = "^5.10.1"
+poethepoet = "^0.13.1"
+pytest = "^6.2.4"
+pytest-cov = "^2.12.0"
+
+[tool.poe.tasks]
+hello = {script = "example.hello:main"}
+main = {script = "main:main"}
+my_script = "bin/my_script.sh"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.scripts]
-hello = "example.hello:main"
+requires = ["poetry-core>=1.0.0"]
 
 [tool.coverage.paths]
 source = ["src"]
@@ -39,15 +42,15 @@ show_missing = true
 # fail_under = 100
 
 [tool.black]
-line-length = 100
-target-version = ['py36', 'py37', 'py38']
-include = '\.py$'
 extend-exclude = '''
 /(
   # The following are specific to Black, you probably don't want those.
   | data
 )/
 '''
+include = '\.py$'
+line-length = 100
+target-version = ['py36', 'py37', 'py38']
 
 [tool.isort]
 profile = "black"
