@@ -70,6 +70,8 @@ python src/main.py
 
 ## References
 
+- https://python-poetry.org/
+- https://github.com/nat-n/poethepoet
 - https://medium.com/@cjolowicz/hypermodern-python-d44485d9d769
 - https://medium.com/@cjolowicz/hypermodern-python-2-testing-ae907a920260#0435
 - https://medium.com/@cjolowicz/hypermodern-python-3-linting-e2f15708da80
