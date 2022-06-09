@@ -25,6 +25,7 @@ pytest-cov = "^2.12.0"
 hello = {script = "example.hello:main"}
 main = {script = "main:main"}
 my_script = "bin/my_script.sh"
+format = "sh -c 'black . && isort src tests'"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
@@ -57,3 +58,4 @@ target-version = ['py36', 'py37', 'py38']
 
 [tool.isort]
 profile = "black"
+src_paths = ["src", "tests"]
