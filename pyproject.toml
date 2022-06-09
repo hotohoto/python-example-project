@@ -25,7 +25,10 @@ pytest-cov = "^2.12.0"
 hello = {script = "example.hello:main"}
 main = {script = "main:main"}
 my_script = "bin/my_script.sh"
+test = "pytest -- tests/example"
+test_integration = "pytest -- tests/integration"
 format = "sh -c 'black . && isort src tests'"
+
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
